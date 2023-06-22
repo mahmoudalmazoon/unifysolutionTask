@@ -4,7 +4,7 @@ const router = express.Router();
 const usercontroller = require("../controllers/user.controller");
 const { extractJwtFromCookie } = require("../middlewares/tokenextractor.middleware");
 
-router.post("/",extractJwtFromCookie, usercontroller.signup);
+router.post("/", usercontroller.signup);
 router.get("/", extractJwtFromCookie, usercontroller.getAllUsers);
 router.patch("/:id",extractJwtFromCookie, usercontroller.editUser);
 router.delete("/:id",extractJwtFromCookie, usercontroller.deleteUser);

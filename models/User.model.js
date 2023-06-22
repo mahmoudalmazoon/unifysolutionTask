@@ -69,9 +69,9 @@ UserSchema.pre("findOneAndUpdate", async function (next) {
 
   return next();
 });
-AttractionSchema.virtual("todo",{
+UserSchema.virtual("todo",{
   ref:"Todo",
   localField:"_id",
   foreignField:"user"
-}) //get All Review related to attraction
+}) //get All todo related to user
 module.exports = mongoose.model("User", UserSchema);
