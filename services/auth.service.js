@@ -35,7 +35,7 @@ const generateAccessToken = async (user) => {
             {
                 issuer: config.server.token.issuer,
                 algorithm: 'HS256',
-                expiresIn: '1d'
+                expiresIn: '30m'
             }
         )
     } catch (error) {
